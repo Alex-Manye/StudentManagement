@@ -6,12 +6,14 @@ An ERP to manage the information from the school students. The school staff can 
 
 This is a group project with @jmoM5 and @raimonestanyol. 
 
-We are going to develop the CRUD in 5 different ways:
+We are going to develop the CRUD in 5 different iterations:
 1) With SQL Server
 2) With stored procedures (Transact)
 3) With Entity framework - Code first
 4) With Entity framework - Data first
 5) With Dapper (an object mapper framework)
+
+We are also adding Unit Testing for the first iteration.
 
 # Getting Started
 This ERP is in C# code. We reccomend Visual Studio to check the code.
@@ -22,20 +24,27 @@ In this implementation, We tried to apply Single Responsibility in the classes a
 The data that the school staff will manage will be:
 
 - StudentId
+
 - StudentName
+
 - StudentLastName
+
 - BirthDate
 
 ## Classes:
 
 -- frmStudent:
+
 -- StudentDao:
 
 
 # Product Backlog
 Refactorize the code: Using 10x10x10 rule.
+
 Add more information to student file (Grades, Country, Previous studies...)
+
 Apply SOLID principles.
 
 # Technology Stack
+
 C# | .NET FRAMEWORK | MSTest
