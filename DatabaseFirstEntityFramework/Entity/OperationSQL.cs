@@ -14,12 +14,15 @@ namespace DatabaseFirstEntityFramework.Entity
             }
         }
 
-        public static void UpdateStudents()
+        public static void UpdateStudents(int id)
         {
             using (StudentEntities db = new StudentEntities())
             {
-                db.Student.Where(students => students.StudentId == 1).ToList().Select(studen => { studen.StudentName = "Ingrid"; return studen;});
+                var students = db.Student.Where(student => student.StudentId == id).ToList();
+                students.ForEach(student => student.StudentName = "Paula");
+                db.SaveChangesAsync();
+                Console.WriteLine("Update successfully");
             }
-            }
+        }
     }
 }
