@@ -14,7 +14,7 @@ namespace DatabaseFirstEntityFramework.Entity
             }
         }
 
-        public static void UpdateStudents(int id)
+        public static void UpdateStudent(int id)
         {
             using (StudentEntities db = new StudentEntities())
             {
@@ -25,7 +25,7 @@ namespace DatabaseFirstEntityFramework.Entity
             }
         }
 
-        public static void DeleteStudents(int id)
+        public static void DeleteStudent(int id)
         {
             using (StudentEntities db = new StudentEntities())
             {
