@@ -24,5 +24,18 @@ namespace DatabaseFirstEntityFramework.Entity
                 Console.WriteLine("Update successfully");
             }
         }
+
+        public static void DeleteStudents(int id)
+        {
+            using (StudentEntities db = new StudentEntities())
+            {
+                var students = db.Student.Where(student => student.StudentId == id).ToList();
+                db.Student.RemoveRange(students);
+                db.SaveChangesAsync();
+                Console.WriteLine("Delete successfully");
+            }
+        }
+
+
     }
 }
