@@ -9,46 +9,40 @@ using System.Threading.Tasks;
 namespace DAO_CRUD.Tests
 {
     [TestClass]
-    public abstract class DeleteTestsBase
+    public abstract class ReadTestsBase
     {
         public Person person;
         public Dao dao;
-
         [ClassInitialize]
-        public void AddClassSetup()
+        public void ReadClassSetup()
         {
             person = new Person(9781, "Alex", "Manye", DateTime.Today);
             dao = new Dao();
             dao.Delete(person.id);
         }
         [TestInitialize]
-        public void DeleteTestsSetup()
+        public void ReadTestsSetup()
         {
             person = new Person(9781, "Alex", "Manye", DateTime.Today);
             dao = new Dao();
             dao.Add(person);
         }
         [TestCleanup]
-        public void DeleteTestsCleanup()
+        public void ReadTestsCleanup()
         {
             person = new Person(9781, "Alex", "Manye", DateTime.Today);
-            dao.Delete(person.id);
+            //dao.Delete(person.id);
 
         }
     }
     [TestClass()]
-    public class AddTests : DeleteTestsBase
+    public class DeTests : ReadTestsBase
     {
         [TestMethod()]
-        public void AddTest()
+        public void ReadTest()
         {
-            Assert.AreEqual(1, dao.Delete(person.id));
-        }
-        [TestMethod()]
-        public void AddRepeatedTest()
-        {
-            Assert.AreEqual(1, dao.Delete(person.id));
-            Assert.AreEqual(0, dao.Delete(person.id));
+            Person student = dao.Read(person.id);
+            Assert.AreEqual(person.ToString(), student.ToString());
         }
     }
 }

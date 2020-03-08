@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using log4net;
 using DAO_CRUD.Properties;
+using System.Globalization;
 
 namespace DAO_CRUD
 {
@@ -13,6 +14,7 @@ namespace DAO_CRUD
     {
         SqlConnection connection;
         SqlCommand command;
+        CultureInfo culture = new CultureInfo("es-ES");
         private static readonly ILog logger = LogManager.GetLogger(typeof(Dao));
 
 
@@ -76,7 +78,7 @@ namespace DAO_CRUD
             command.Parameters.AddWithValue("@Id", person.id);
             command.Parameters.AddWithValue("@Name", person.name);
             command.Parameters.AddWithValue("@Surname", person.surname);
-            command.Parameters.AddWithValue("@Birthday", person.birthday.ToString("d"));
+            command.Parameters.AddWithValue("@Birthday", person.birthday.ToString("d",culture));
         }
 
         public Person Read(int personId)
@@ -86,21 +88,33 @@ namespace DAO_CRUD
             SqlDataReader reader = command.ExecuteReader();
             bool found = false;
             Person person = null;
-            while (reader.Read() && !found)
-            {
-                string id = string.Format("{0}", reader[0]);
-                person = PersonFound(ref found, id, reader, personId);
-            }
+            while (!found)
+                IteratePersons(personId, ref reader, ref found, ref person);
             Disconnecter();
             return person;
         }
+
+        private void IteratePersons(int personId, ref SqlDataReader reader, ref bool found, ref Person person)
+        {
+            try
+            {
+                reader.Read();
+                string id = string.Format("{0}", reader[0]);
+                person = PersonFound(ref found, id, reader, personId);
+            }
+            catch (InvalidOperationException ex)
+            {
+                Console.WriteLine("The person is not found");
+            }
+        }
+
         public Person PersonFound(ref bool found, string id, SqlDataReader reader, int personId)
         {
             if (int.TryParse(id, out int result) && result == personId)
             {
                 found = true;
                 Person person = new Person(int.Parse(id), string.Format("{0}", reader[1]),
-                    string.Format("{0}", reader[2]), DateTime.Parse(string.Format("{0}", reader[3])));
+                    string.Format("{0}", reader[2]), DateTime.Parse(string.Format("{0}", reader[3]), culture));
                 Disconnecter();
                 return person;
             }

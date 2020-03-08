@@ -17,3 +17,4 @@ C:\Users\raimoner\Documents\GitHub\StudentManagement\DAO CRUD\DAO CRUDTests1\bin
 C:\Users\raimoner\Documents\GitHub\StudentManagement\DAO CRUD\DAO CRUDTests1\obj\Debug\Delete Tests.csproj.CopyComplete
 C:\Users\raimoner\Documents\GitHub\StudentManagement\DAO CRUD\DAO CRUDTests1\obj\Debug\DAO CRUDTests1.dll
 C:\Users\raimoner\Documents\GitHub\StudentManagement\DAO CRUD\DAO CRUDTests1\obj\Debug\DAO CRUDTests1.pdb
+C:\Users\raimoner\Documents\GitHub\StudentManagement\DAO CRUD\DAO CRUDTests1\obj\Debug\Delete Tests.csprojAssemblyReference.cache

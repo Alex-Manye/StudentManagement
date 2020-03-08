@@ -13,14 +13,22 @@ namespace DAO_CRUD.Tests
     {
         public Person person;
         public Dao dao;
+
+        [ClassInitialize]
+        public void AddClassSetup()
+        {
+            person = new Person(9781, "Alex", "Manye", DateTime.Today);
+            dao = new Dao();
+            dao.Delete(person.id);
+        }
         [TestInitialize]
-        public void Setup()
+        public void AddTestSetup()
         {
             person = new Person(9781, "Alex", "Manye", DateTime.Today);
             dao = new Dao();
         }
         [TestCleanup]
-        public void CleanupAddTest()
+        public void AddTestCleanup()
         {
             person = new Person(9781, "Alex", "Manye", DateTime.Today);
             dao.Delete(person.id);
