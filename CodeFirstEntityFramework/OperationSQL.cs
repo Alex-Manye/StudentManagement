@@ -41,5 +41,17 @@ namespace CodeFirstEntityFramework
         }
 
 
+        public static void DeleteStudent(int id)
+        {
+            using (StudentContext db = new StudentContext())
+            {
+                var students = db.Students.Where(student => student.StudentId == id).ToList();
+                db.Students.RemoveRange(students);
+                db.SaveChangesAsync();
+                Console.WriteLine("Delete successfully");
+            }
+        }
+
+
     }
 }
