@@ -29,6 +29,17 @@ namespace CodeFirstEntityFramework
             Console.WriteLine("Create Successfully");
         }
 
+        public static void UpdateStudent(int id, string Name)
+        {
+            using (StudentContext db = new StudentContext())
+            {
+                var students = db.Students.Where(student => student.StudentId == id).ToList();
+                students.ForEach(student => student.StudentName = Name);
+                db.SaveChangesAsync();
+                Console.WriteLine("Update successfully");
+            }
+        }
+
 
     }
 }
