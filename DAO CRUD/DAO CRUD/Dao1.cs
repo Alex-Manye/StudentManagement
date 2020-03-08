@@ -48,7 +48,7 @@ namespace DAO_CRUD
         public int Add(Person person)
         {
             Connecter();
-            AddParameters(person);
+            AddParameters(person, Resources.addCommand);
             int affectedRows = 0;
             affectedRows = TryAddingPerson(affectedRows);
             Disconnecter();
@@ -70,9 +70,9 @@ namespace DAO_CRUD
             return affectedRows;
         }
 
-        private void AddParameters(Person person)
+        private void AddParameters(Person person, string query)
         {
-            command = new SqlCommand(Resources.addCommand, connection);
+            command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@Id", person.id);
             command.Parameters.AddWithValue("@Name", person.name);
             command.Parameters.AddWithValue("@Surname", person.surname);
@@ -105,6 +105,15 @@ namespace DAO_CRUD
                 return person;
             }
             return null;
+        }
+        public int Update(Person person)
+        {
+            Connecter();
+            AddParameters(person, Resources.updateCommand);
+            int affectedRows = command.ExecuteNonQuery();
+            Disconnecter();
+            Console.WriteLine("Affected Rows: " + affectedRows);
+            return affectedRows;
         }
     }
 
