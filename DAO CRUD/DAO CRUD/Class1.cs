@@ -28,10 +28,13 @@ namespace DAO_CRUD
             catch (Exception ex)
             {
                 logger.Info(ex);
-                throw ex;
+                throw;
             }
         }
-
+        private void Disconnecter()
+        {
+            connection.Close();
+        }
 
     }
 

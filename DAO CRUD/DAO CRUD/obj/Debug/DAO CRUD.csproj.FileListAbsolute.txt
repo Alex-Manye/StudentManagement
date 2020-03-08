@@ -1,0 +1,10 @@
+C:\Users\raimoner\Documents\GitHub\StudentManagement\DAO CRUD\DAO CRUD\bin\Debug\DAO CRUD.dll
+C:\Users\raimoner\Documents\GitHub\StudentManagement\DAO CRUD\DAO CRUD\bin\Debug\DAO CRUD.pdb
+C:\Users\raimoner\Documents\GitHub\StudentManagement\DAO CRUD\DAO CRUD\bin\Debug\log4net.dll
+C:\Users\raimoner\Documents\GitHub\StudentManagement\DAO CRUD\DAO CRUD\bin\Debug\log4net.xml
+C:\Users\raimoner\Documents\GitHub\StudentManagement\DAO CRUD\DAO CRUD\obj\Debug\DAO CRUD.csprojAssemblyReference.cache
+C:\Users\raimoner\Documents\GitHub\StudentManagement\DAO CRUD\DAO CRUD\obj\Debug\DAO_CRUD.Properties.Resources.resources
+C:\Users\raimoner\Documents\GitHub\StudentManagement\DAO CRUD\DAO CRUD\obj\Debug\DAO CRUD.csproj.GenerateResource.cache
+C:\Users\raimoner\Documents\GitHub\StudentManagement\DAO CRUD\DAO CRUD\obj\Debug\DAO CRUD.csproj.CopyComplete
+C:\Users\raimoner\Documents\GitHub\StudentManagement\DAO CRUD\DAO CRUD\obj\Debug\DAO CRUD.dll
+C:\Users\raimoner\Documents\GitHub\StudentManagement\DAO CRUD\DAO CRUD\obj\Debug\DAO CRUD.pdb
