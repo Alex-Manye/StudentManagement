@@ -61,7 +61,7 @@ namespace DAO_CRUD.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a INSERT Student (name, surname, birthday) VALUES (@Name, @Surname, CURRENT_TIMESTAMP);.
+        ///   Busca una cadena traducida similar a SET IDENTITY_INSERT Student ON INSERT Student (studentid, name, surname, birthday) VALUES (@Id, @Name, @Surname, @Birthday);.
         /// </summary>
         internal static string addCommand {
             get {

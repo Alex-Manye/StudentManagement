@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="addCommand" xml:space="preserve">
-    <value>INSERT Student (name, surname, birthday) VALUES (@Name, @Surname, CURRENT_TIMESTAMP);</value>
+    <value>SET IDENTITY_INSERT Student ON INSERT Student (studentid, name, surname, birthday) VALUES (@Id, @Name, @Surname, @Birthday);</value>
   </data>
   <data name="connectionString" xml:space="preserve">
     <value>Server=.;Database=Vueling;User Id=sa;Password=Passw0rd;</value>
