@@ -59,5 +59,59 @@ namespace DAO_CRUD.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a INSERT Student (name, surname, birthday) VALUES (@Name, @Surname, CURRENT_TIMESTAMP);.
+        /// </summary>
+        internal static string addCommand {
+            get {
+                return ResourceManager.GetString("addCommand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Server=.;Database=Vueling;User Id=sa;Password=Passw0rd;.
+        /// </summary>
+        internal static string connectionString {
+            get {
+                return ResourceManager.GetString("connectionString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a DELETE FROM Student WHERE StudentId = @studentid;.
+        /// </summary>
+        internal static string deleteCommand {
+            get {
+                return ResourceManager.GetString("deleteCommand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a SELECT* FROM Student WHERE StudentId = @studentid OR name = @Name OR surname = @Surname;.
+        /// </summary>
+        internal static string read1Command {
+            get {
+                return ResourceManager.GetString("read1Command", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a SELECT * FROM Student;.
+        /// </summary>
+        internal static string readCommand {
+            get {
+                return ResourceManager.GetString("readCommand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a UPDATE Student SET name = @StudentName, surname = @StudentSurname, birthday=CURRENT_TIMESTAMP WHERE studentid = @StudentId.
+        /// </summary>
+        internal static string updateCommand {
+            get {
+                return ResourceManager.GetString("updateCommand", resourceCulture);
+            }
+        }
     }
 }
