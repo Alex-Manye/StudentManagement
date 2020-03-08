@@ -31,21 +31,68 @@ namespace DAO_CRUD
                 throw;
             }
         }
+
+        public int Delete(int id)
+        {
+            Connecter();
+            command = new SqlCommand(Resources.deleteCommand, connection);
+            command.Parameters.AddWithValue("@studentid", id);
+            int affectedRows = command.ExecuteNonQuery();
+            Disconnecter();
+            return affectedRows;
+        }
+
         public void Disconnecter()
         {
             connection.Close();
         }
-        public void Add(Person person)
+        public int Add(Person person)
         {
             Connecter();
             command = new SqlCommand(Resources.addCommand, connection);
-            command.Parameters.AddWithValue("@StudentId", person.id);
+            command.Parameters.AddWithValue("@Id", person.id);
             command.Parameters.AddWithValue("@Name", person.name);
             command.Parameters.AddWithValue("@Surname", person.surname);
             command.Parameters.AddWithValue("@Birthday", person.birthday.ToString("d"));
-            int affectedRows = command.ExecuteNonQuery();
+            int affectedRows = 0;
+            try
+            {
+                affectedRows = command.ExecuteNonQuery();
+            }
+            catch
+            {
+                Console.WriteLine("This ID is already occupied");
+            }
             Disconnecter();
             Console.WriteLine("Affected Rows: " + affectedRows);
+            return affectedRows;
+        }
+        public Person Read(int personId)
+        {
+            Connecter();
+            command = new SqlCommand(Resources.readCommand, connection);
+            SqlDataReader reader = command.ExecuteReader();
+            bool found = false;
+            Person person = null;
+            while (reader.Read() && !found)
+            {
+                string id = string.Format("{0}", reader[0]);
+                person = PersonFound(ref found, id, reader, personId);
+            }
+            Disconnecter();
+            return person;
+        }
+        public Person PersonFound(ref bool found, string id, SqlDataReader reader, int personId)
+        {
+            if (int.TryParse(id, out int result) && result == personId)
+            {
+                found = true;
+                Person person = new Person(int.Parse(id), string.Format("{0}", reader[1]),
+                    string.Format("{0}", reader[2]), DateTime.Parse(string.Format("{0}", reader[3])));
+                Disconnecter();
+                return person;
+            }
+            return null;
         }
     }
 
