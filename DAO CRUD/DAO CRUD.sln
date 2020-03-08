@@ -5,7 +5,11 @@ VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAO CRUD", "DAO CRUD\DAO CRUD.csproj", "{35C86395-CD36-4B79-A055-12B0A6D9EE45}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAO CRUDTests", "DAO CRUDTests\DAO CRUDTests.csproj", "{9D5367B2-0165-4CE6-BA91-519222F18D5B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddTests", "DAO CRUDTests\AddTests.csproj", "{9D5367B2-0165-4CE6-BA91-519222F18D5B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{13437C9D-71E7-4E07-BF20-4AF338C3ADDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delete Tests", "DAO CRUDTests1\Delete Tests.csproj", "{64FBE416-51D7-4F80-872D-3D3790C1A34D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +25,17 @@ Global
 		{9D5367B2-0165-4CE6-BA91-519222F18D5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D5367B2-0165-4CE6-BA91-519222F18D5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D5367B2-0165-4CE6-BA91-519222F18D5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64FBE416-51D7-4F80-872D-3D3790C1A34D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64FBE416-51D7-4F80-872D-3D3790C1A34D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64FBE416-51D7-4F80-872D-3D3790C1A34D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64FBE416-51D7-4F80-872D-3D3790C1A34D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9D5367B2-0165-4CE6-BA91-519222F18D5B} = {13437C9D-71E7-4E07-BF20-4AF338C3ADDD}
+		{64FBE416-51D7-4F80-872D-3D3790C1A34D} = {13437C9D-71E7-4E07-BF20-4AF338C3ADDD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5C29B81A-B3A2-4B55-BD31-BEDE19A8A3DA}

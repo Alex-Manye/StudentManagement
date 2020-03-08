@@ -9,36 +9,39 @@ using System.Threading.Tasks;
 namespace DAO_CRUD.Tests
 {
     [TestClass]
-    public abstract class BaseTests
+    public abstract class DeleteTestsBase
     {
         public Person person;
         public Dao dao;
         [TestInitialize]
-        public void Setup()
+        public void DeleteTestsSetup()
         {
             person = new Person(9781, "Alex", "Manye", DateTime.Today);
             dao = new Dao();
+            dao.Delete(person.id);
+            dao.Add(person);
         }
         [TestCleanup]
-        public void CleanupAddTest()
+        public void DeleteTestsCleanup()
         {
             person = new Person(9781, "Alex", "Manye", DateTime.Today);
             dao.Delete(person.id);
+
         }
     }
     [TestClass()]
-    public class DaoTests : BaseTests
+    public class AddTests : DeleteTestsBase
     {
         [TestMethod()]
         public void AddTest()
         {
-            Assert.AreEqual(1, dao.Add(person));
+            Assert.AreEqual(1, dao.Delete(person.id));
         }
         [TestMethod()]
         public void AddRepeatedTest()
         {
-            Assert.AreEqual(1, dao.Add(person));
-            Assert.AreEqual(0, dao.Add(person));
+            Assert.AreEqual(1, dao.Delete(person.id));
+            Assert.AreEqual(0, dao.Delete(person.id));
         }
     }
 }
