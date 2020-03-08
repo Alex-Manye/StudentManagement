@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DAO_CRUD
 {
-    class Person
+    public class Person
     {
         public int id { get; set; }
         public string name { get; set; }
