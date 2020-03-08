@@ -23,7 +23,6 @@ namespace DAO_CRUD
             {
                 connection = new SqlConnection(Resources.connectionString);
                 connection.Open();
-                //MessageBox.Show("Connection opened");
             }
             catch (Exception ex)
             {
@@ -49,12 +48,16 @@ namespace DAO_CRUD
         public int Add(Person person)
         {
             Connecter();
-            command = new SqlCommand(Resources.addCommand, connection);
-            command.Parameters.AddWithValue("@Id", person.id);
-            command.Parameters.AddWithValue("@Name", person.name);
-            command.Parameters.AddWithValue("@Surname", person.surname);
-            command.Parameters.AddWithValue("@Birthday", person.birthday.ToString("d"));
+            AddParameters(person);
             int affectedRows = 0;
+            affectedRows = TryAddingPerson(affectedRows);
+            Disconnecter();
+            Console.WriteLine("Affected Rows: " + affectedRows);
+            return affectedRows;
+        }
+
+        private int TryAddingPerson(int affectedRows)
+        {
             try
             {
                 affectedRows = command.ExecuteNonQuery();
@@ -63,10 +66,19 @@ namespace DAO_CRUD
             {
                 Console.WriteLine("This ID is already occupied");
             }
-            Disconnecter();
-            Console.WriteLine("Affected Rows: " + affectedRows);
+
             return affectedRows;
         }
+
+        private void AddParameters(Person person)
+        {
+            command = new SqlCommand(Resources.addCommand, connection);
+            command.Parameters.AddWithValue("@Id", person.id);
+            command.Parameters.AddWithValue("@Name", person.name);
+            command.Parameters.AddWithValue("@Surname", person.surname);
+            command.Parameters.AddWithValue("@Birthday", person.birthday.ToString("d"));
+        }
+
         public Person Read(int personId)
         {
             Connecter();
