@@ -18,7 +18,7 @@ namespace DatabaseFirstEntityFramework.Entity
         {
             using (StudentEntities db = new StudentEntities())
             {
-                object p = db.Student.Where(students => students.StudentId == 1).ToList().SetValue(student => student.S = 1000);
+                db.Student.Where(students => students.StudentId == 1).ToList().Select(studen => { studen.StudentName = "Ingrid"; return studen;});
             }
             }
     }
