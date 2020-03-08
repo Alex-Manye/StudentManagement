@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace CodeFirstEntityFramework
 {
-    class OperationSQL
+    public class OperationSQL
     {
         public static void ReadStudents()
         {
@@ -15,6 +15,7 @@ namespace CodeFirstEntityFramework
                 students.ForEach(student => Console.WriteLine(student.StudentName));
             }
         }
+
         public static void CreateStudent(string Name, string LastName, DateTime Birthday)
         {
             StudentContext db = new StudentContext();

@@ -1,0 +1,11 @@
+C:\Users\joan.miquel\source\repos\StudentManagement\DatabaseFirstEntityFramework\bin\Debug\DatabaseFirstEntityFramework.exe.config
+C:\Users\joan.miquel\source\repos\StudentManagement\DatabaseFirstEntityFramework\bin\Debug\DatabaseFirstEntityFramework.exe
+C:\Users\joan.miquel\source\repos\StudentManagement\DatabaseFirstEntityFramework\bin\Debug\DatabaseFirstEntityFramework.pdb
+C:\Users\joan.miquel\source\repos\StudentManagement\DatabaseFirstEntityFramework\bin\Debug\EntityFramework.dll
+C:\Users\joan.miquel\source\repos\StudentManagement\DatabaseFirstEntityFramework\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\joan.miquel\source\repos\StudentManagement\DatabaseFirstEntityFramework\bin\Debug\EntityFramework.xml
+C:\Users\joan.miquel\source\repos\StudentManagement\DatabaseFirstEntityFramework\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\joan.miquel\source\repos\StudentManagement\DatabaseFirstEntityFramework\obj\Debug\DatabaseFirstEntityFramework.csproj.CopyComplete
+C:\Users\joan.miquel\source\repos\StudentManagement\DatabaseFirstEntityFramework\obj\Debug\DatabaseFirstEntityFramework.exe
+C:\Users\joan.miquel\source\repos\StudentManagement\DatabaseFirstEntityFramework\obj\Debug\DatabaseFirstEntityFramework.pdb
+C:\Users\joan.miquel\source\repos\StudentManagement\DatabaseFirstEntityFramework\obj\Debug\DatabaseFirstEntityFramework.csprojAssemblyReference.cache
