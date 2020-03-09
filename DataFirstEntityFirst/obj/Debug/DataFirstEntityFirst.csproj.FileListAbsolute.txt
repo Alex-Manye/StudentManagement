@@ -8,3 +8,4 @@ C:\Users\joan.miquel\source\repos\StudentManagement\DataFirstEntityFirst\bin\Deb
 C:\Users\joan.miquel\source\repos\StudentManagement\DataFirstEntityFirst\obj\Debug\DataFirstEntityFirst.csproj.CopyComplete
 C:\Users\joan.miquel\source\repos\StudentManagement\DataFirstEntityFirst\obj\Debug\DataFirstEntityFirst.dll
 C:\Users\joan.miquel\source\repos\StudentManagement\DataFirstEntityFirst\obj\Debug\DataFirstEntityFirst.pdb
+C:\Users\joan.miquel\source\repos\StudentManagement\DataFirstEntityFirst\obj\Debug\DataFirstEntityFirst.csprojAssemblyReference.cache
