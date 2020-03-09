@@ -37,10 +37,10 @@ The data that the school staff will manage will be:
 
 -- StudentDao: 
 
-# Definition of Ready
+## Definition of Ready
 UML & Issues creation to be able to put in order. Once done the team decides which ones will be elligible to add in the Sprint Backlog. 
 
-# Definition of Done
+## Definition of Done
 Unit Test creation in CRUD methods in each one of the 5 exercises and testing by the team.
 
 # Product Backlog
