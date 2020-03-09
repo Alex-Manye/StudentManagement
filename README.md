@@ -35,8 +35,13 @@ The data that the school staff will manage will be:
 
 -- frmStudent:
 
--- StudentDao:
+-- StudentDao: 
 
+# Definition of Ready
+UML & Issues creation to be able to put in order. Once done the team decides which ones will be elligible to add in the Sprint Backlog. 
+
+# Definition of Done
+Unit Test creation in CRUD methods in each one of the 5 exercises and testing by the team.
 
 # Product Backlog
 Refactorize the code: Using 10x10x10 rule.
