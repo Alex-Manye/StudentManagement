@@ -53,6 +53,11 @@ The data that the school staff will manage will be:
 
 -- Person
 
+## Definition of Ready:
+UML done and all Issues created and put in order to be sellected from the Sprint Backlog.
+
+## Definition of Done:
+Unit Tests for the 4 methods (CRUD) done and executed by the group.
 
 # Product Backlog
 Refactorize the code: Using 10x10x10 rule.
