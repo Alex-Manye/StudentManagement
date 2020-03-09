@@ -1,0 +1,11 @@
+C:\Users\joan.miquel\source\repos\StudentManagement\DataFirstEntityFirst\bin\Debug\DataFirstEntityFirst.dll.config
+C:\Users\joan.miquel\source\repos\StudentManagement\DataFirstEntityFirst\bin\Debug\DataFirstEntityFirst.dll
+C:\Users\joan.miquel\source\repos\StudentManagement\DataFirstEntityFirst\bin\Debug\DataFirstEntityFirst.pdb
+C:\Users\joan.miquel\source\repos\StudentManagement\DataFirstEntityFirst\bin\Debug\EntityFramework.dll
+C:\Users\joan.miquel\source\repos\StudentManagement\DataFirstEntityFirst\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\joan.miquel\source\repos\StudentManagement\DataFirstEntityFirst\bin\Debug\EntityFramework.xml
+C:\Users\joan.miquel\source\repos\StudentManagement\DataFirstEntityFirst\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\joan.miquel\source\repos\StudentManagement\DataFirstEntityFirst\obj\Debug\DataFirstEntityFirst.csproj.CopyComplete
+C:\Users\joan.miquel\source\repos\StudentManagement\DataFirstEntityFirst\obj\Debug\DataFirstEntityFirst.dll
+C:\Users\joan.miquel\source\repos\StudentManagement\DataFirstEntityFirst\obj\Debug\DataFirstEntityFirst.pdb
+C:\Users\joan.miquel\source\repos\StudentManagement\DataFirstEntityFirst\obj\Debug\DataFirstEntityFirst.csprojAssemblyReference.cache

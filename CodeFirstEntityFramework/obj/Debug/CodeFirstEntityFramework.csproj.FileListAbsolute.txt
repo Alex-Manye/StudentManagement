@@ -1,0 +1,11 @@
+C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFramework\bin\Debug\CodeFirstEntityFramework.dll.config
+C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFramework\bin\Debug\CodeFirstEntityFramework.dll
+C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFramework\bin\Debug\CodeFirstEntityFramework.pdb
+C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFramework\bin\Debug\EntityFramework.dll
+C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFramework\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFramework\bin\Debug\EntityFramework.xml
+C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFramework\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFramework\obj\Debug\CodeFirstEntityFramework.csproj.CopyComplete
+C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFramework\obj\Debug\CodeFirstEntityFramework.dll
+C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFramework\obj\Debug\CodeFirstEntityFramework.pdb
+C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFramework\obj\Debug\CodeFirstEntityFramework.csprojAssemblyReference.cache
