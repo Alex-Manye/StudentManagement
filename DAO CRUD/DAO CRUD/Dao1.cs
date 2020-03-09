@@ -113,7 +113,6 @@ namespace DAO_CRUD
                 found = true;
                 Person person = new Person(int.Parse(id), string.Format("{0}", reader[1]),
                     string.Format("{0}", reader[2]), DateTime.Parse(string.Format("{0}", reader[3]), culture));
-                //Console.WriteLine(DateTime.Parse(string.Format("{0}", reader[3])).ToString("d"));
                 Disconnecter();
                 return person;
             }
