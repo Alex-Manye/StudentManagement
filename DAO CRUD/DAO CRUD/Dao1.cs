@@ -14,7 +14,7 @@ namespace DAO_CRUD
     {
         SqlConnection connection;
         SqlCommand command;
-        CultureInfo culture = new CultureInfo("es-ES");
+        CultureInfo culture = new CultureInfo("af-ZA");
         private static readonly ILog logger = LogManager.GetLogger(typeof(Dao));
 
 
@@ -51,14 +51,13 @@ namespace DAO_CRUD
         {
             Connecter();
             AddParameters(person, Resources.addCommand);
-            int affectedRows = 0;
-            affectedRows = TryAddingPerson(affectedRows);
+            TryAddingPerson(out int affectedRows);
             Disconnecter();
             Console.WriteLine("Affected Rows: " + affectedRows);
             return affectedRows;
         }
 
-        private int TryAddingPerson(int affectedRows)
+        private void TryAddingPerson(out int affectedRows)
         {
             try
             {
@@ -67,9 +66,8 @@ namespace DAO_CRUD
             catch
             {
                 Console.WriteLine("This ID is already occupied");
+                affectedRows = 0;
             }
-
-            return affectedRows;
         }
 
         private void AddParameters(Person person, string query)
@@ -78,7 +76,7 @@ namespace DAO_CRUD
             command.Parameters.AddWithValue("@Id", person.id);
             command.Parameters.AddWithValue("@Name", person.name);
             command.Parameters.AddWithValue("@Surname", person.surname);
-            command.Parameters.AddWithValue("@Birthday", person.birthday.ToString("d",culture));
+            command.Parameters.AddWithValue("@Birthday", person.birthday.ToString("d"));
         }
 
         public Person Read(int personId)
@@ -102,7 +100,7 @@ namespace DAO_CRUD
                 string id = string.Format("{0}", reader[0]);
                 person = PersonFound(ref found, id, reader, personId);
             }
-            catch (InvalidOperationException ex)
+            catch (InvalidOperationException)
             {
                 Console.WriteLine("The person is not found");
             }
@@ -115,6 +113,7 @@ namespace DAO_CRUD
                 found = true;
                 Person person = new Person(int.Parse(id), string.Format("{0}", reader[1]),
                     string.Format("{0}", reader[2]), DateTime.Parse(string.Format("{0}", reader[3]), culture));
+                //Console.WriteLine(DateTime.Parse(string.Format("{0}", reader[3])).ToString("d"));
                 Disconnecter();
                 return person;
             }
@@ -128,6 +127,20 @@ namespace DAO_CRUD
             Disconnecter();
             Console.WriteLine("Affected Rows: " + affectedRows);
             return affectedRows;
+        }
+        
+        public Person Read1(int id)
+        {
+            Connecter();
+            command = new SqlCommand(Resources.read1Command, connection);
+            try
+            {
+                SqlDataReader reader1 = command.ExecuteReader();
+                Disconnecter();
+                return new Person(id, string.Format("{0}", reader1[1]),
+                        string.Format("{0}", reader1[2]), DateTime.Parse(string.Format("{0}", reader1[3]), culture));
+            }
+            catch { throw; }
         }
     }
 

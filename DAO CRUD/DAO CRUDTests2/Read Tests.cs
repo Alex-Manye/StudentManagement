@@ -31,18 +31,19 @@ namespace DAO_CRUD.Tests
         public void ReadTestsCleanup()
         {
             person = new Person(9781, "Alex", "Manye", DateTime.Today);
-            //dao.Delete(person.id);
+            dao.Delete(person.id);
 
         }
     }
     [TestClass()]
-    public class DeTests : ReadTestsBase
+    public class ReadTests : ReadTestsBase
     {
         [TestMethod()]
         public void ReadTest()
         {
-            Person student = dao.Read(person.id);
-            Assert.AreEqual(person.ToString(), student.ToString());
+            Person readPerson = dao.Read(person.id);
+            Assert.AreEqual(person.ToString(), readPerson.ToString());
+            Console.WriteLine(person.ToString());
         }
     }
 }

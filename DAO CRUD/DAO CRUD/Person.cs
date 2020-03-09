@@ -10,13 +10,12 @@ namespace DAO_CRUD
     public class Person
     {
 
-        CultureInfo culture = new CultureInfo("es-ES");
         public Person(int id, string name, string surname, DateTime birthday)
         {
             this.id = id;
             this.name = name;
             this.surname = surname;
-            this.birthday = DateTime.Parse(birthday.ToString(),culture);
+            this.birthday = birthday;
         }
 
         public int id { get; set; }
@@ -24,9 +23,9 @@ namespace DAO_CRUD
         public string surname { get; set; }
         public DateTime birthday { get; set; }
 
-        public string ToString()
+        public override string ToString()
         {
-            return id.ToString() + " " + name + " " + surname + " " + birthday.ToString();
+            return id.ToString() + " " + name + " " + surname + " " + birthday.ToString("d");
         }
     }
 }

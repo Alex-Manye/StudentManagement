@@ -88,7 +88,7 @@ namespace DAO_CRUD.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a SELECT* FROM Student WHERE StudentId = @studentid OR name = @Name OR surname = @Surname;.
+        ///   Busca una cadena traducida similar a SELECT* FROM Student WHERE StudentId = @studentid;.
         /// </summary>
         internal static string read1Command {
             get {
@@ -106,7 +106,7 @@ namespace DAO_CRUD.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a UPDATE Student SET name = @StudentName, surname = @StudentSurname, birthday=CURRENT_TIMESTAMP WHERE studentid = @StudentId.
+        ///   Busca una cadena traducida similar a UPDATE Student SET name = @Name, surname = @Surname, birthday=@Birthday WHERE studentid = @id.
         /// </summary>
         internal static string updateCommand {
             get {

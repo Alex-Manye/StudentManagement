@@ -127,12 +127,12 @@
     <value>DELETE FROM Student WHERE StudentId = @studentid;</value>
   </data>
   <data name="read1Command" xml:space="preserve">
-    <value>SELECT* FROM Student WHERE StudentId = @studentid OR name = @Name OR surname = @Surname;</value>
+    <value>SELECT* FROM Student WHERE StudentId = @studentid;</value>
   </data>
   <data name="readCommand" xml:space="preserve">
     <value>SELECT * FROM Student;</value>
   </data>
   <data name="updateCommand" xml:space="preserve">
-    <value>UPDATE Student SET name = @StudentName, surname = @StudentSurname, birthday=CURRENT_TIMESTAMP WHERE studentid = @StudentId</value>
+    <value>UPDATE Student SET name = @Name, surname = @Surname, birthday=@Birthday WHERE studentid = @id</value>
   </data>
 </root>
