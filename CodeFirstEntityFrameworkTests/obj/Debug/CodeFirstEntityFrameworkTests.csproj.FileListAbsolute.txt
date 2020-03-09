@@ -6,12 +6,12 @@ C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFrameworkTest
 C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFrameworkTests\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
 C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFrameworkTests\bin\Debug\CodeFirstEntityFrameworkTests.dll
 C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFrameworkTests\bin\Debug\CodeFirstEntityFrameworkTests.pdb
-C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFrameworkTests\bin\Debug\CodeFirstEntityFramework.exe
+C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFrameworkTests\bin\Debug\CodeFirstEntityFramework.dll
 C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFrameworkTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
 C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFrameworkTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
 C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFrameworkTests\bin\Debug\EntityFramework.dll
 C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFrameworkTests\bin\Debug\CodeFirstEntityFramework.pdb
-C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFrameworkTests\bin\Debug\CodeFirstEntityFramework.exe.config
+C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFrameworkTests\bin\Debug\CodeFirstEntityFramework.dll.config
 C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFrameworkTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
 C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFrameworkTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
 C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFrameworkTests\bin\Debug\EntityFramework.xml
@@ -19,3 +19,6 @@ C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFrameworkTest
 C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFrameworkTests\obj\Debug\CodeFirstEntityFrameworkTests.csproj.CopyComplete
 C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFrameworkTests\obj\Debug\CodeFirstEntityFrameworkTests.dll
 C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFrameworkTests\obj\Debug\CodeFirstEntityFrameworkTests.pdb
+C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFrameworkTests\bin\Debug\CodeFirstEntityFrameworkTests.dll.config
+C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFrameworkTests\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFrameworkTests\bin\Debug\EntityFramework.SqlServer.xml

@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace CodeFirstEntityFramework
 {
-    public class OperationSQL
+    public static class OperationSQL
     {
         public static void ReadStudents()
         {
@@ -16,18 +16,11 @@ namespace CodeFirstEntityFramework
             }
         }
 
-        public static void CreateStudent(string Name, string LastName, DateTime Birthday)
+        public static void CreateStudent(StudentDao student)
         {
             StudentContext db = new StudentContext();
-            StudentDao student = new StudentDao
-            {
-                StudentName = Name,
-                StudentLastName = LastName,
-                BirthDate = Birthday
-            };
             db.Students.Add(student);
             db.SaveChangesAsync();
-            Console.WriteLine("Create Successfully");
         }
 
         public static void UpdateStudent(int id, string Name)
@@ -37,7 +30,6 @@ namespace CodeFirstEntityFramework
                 var students = db.Students.Where(student => student.StudentId == id).ToList();
                 students.ForEach(student => student.StudentName = Name);
                 db.SaveChangesAsync();
-                Console.WriteLine("Update successfully");
             }
         }
 
@@ -49,7 +41,6 @@ namespace CodeFirstEntityFramework
                 var students = db.Students.Where(student => student.StudentId == id).ToList();
                 db.Students.RemoveRange(students);
                 db.SaveChangesAsync();
-                Console.WriteLine("Delete successfully");
             }
         }
 

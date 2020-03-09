@@ -1,10 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using CodeFirstEntityFramework;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CodeFirstEntityFramework.Tests
 {
@@ -12,42 +7,36 @@ namespace CodeFirstEntityFramework.Tests
     public class OperationSQLTests
     {
         [TestMethod()]
-        public void ReadStudentsTest()
+        public void ReadStudentTest()
         {
-            Assert.Fail();
+            OperationSQL.ReadStudents();
         }
 
         [TestMethod()]
         public void CreateStudentTest()
         {
-            //Assert.Fail();
-            /*
-            StudentDao student = new StudentDao {
-                StudentName = "Maria",
-                StudentLastName = "Parrado",
-                BirthDate = new DateTime(2002,02,17)
+            StudentDao student = new StudentDao
+            {
+                StudentName = "Ingrid",
+                StudentLastName = "Pardo",
+                BirthDate = new DateTime(2002, 02, 17)
             };
 
             OperationSQL.CreateStudent(student);
-           */
-          
-
-
-            
-               
         }
 
         [TestMethod()]
         public void UpdateStudentTest()
         {
-            Assert.Fail();
+            string name = "Marta";
+            OperationSQL.UpdateStudent(1,name);
+
         }
 
         [TestMethod()]
         public void DeleteStudentTest()
         {
-            int id = 5;
-            OperationSQL.DeleteStudent(id);
+            OperationSQL.DeleteStudent(1);
         }
     }
 }
