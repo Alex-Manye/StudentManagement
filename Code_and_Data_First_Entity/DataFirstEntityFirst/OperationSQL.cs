@@ -1,48 +1,157 @@
 ﻿using System;
+using System.Data.Entity.Infrastructure;
+using System.Data.Entity.Validation;
 using System.Linq;
+using DataFirstEntityFirst;
 using DataFirstEntityFirst.Entity;
+using log4net;
 
 namespace DatabaseFirstEntityFramework.Entity
 {
-    public class OperationSql
+    public class OperationSql : SqlServer
     {
-        public static void ReadStudents()
+        private static readonly ILog log = LogManager.GetLogger(typeof(OperationSql));
+        public void ReadStudents()
         {
             using (StudentEntities db = new StudentEntities())
             {
-                var students = (from student in db.Student
-                                select student).ToList();
-                students.ForEach(student => Console.WriteLine(student.Name));
+                try
+                {
+                    var students = (from student in db.Student
+                                    select student).ToList();
+                    students.ForEach(student => Console.WriteLine(student));
+                }
+                catch (ArgumentNullException error)
+                {
+                    log.Error(error);
+                    throw;
+                }
+                catch (InvalidOperationException error)
+                {
+                    log.Error(error);
+                    throw;
+                }
             }
         }
 
-        public static void CreateStudent(Student student)
+        public void CreateStudent(Student student)
         {
             StudentEntities db = new StudentEntities();
             db.Student.Add(student);
-            db.SaveChangesAsync();
-            Console.WriteLine("Create Successfully");
-        }
-
-        public static void UpdateStudent(int id, string Name)
-        {
-            using (StudentEntities db = new StudentEntities())
+            try
             {
-                var students = db.Student.Where(student => student.Studentid == id).ToList();
-                students.ForEach(student => student.Name = Name);
                 db.SaveChangesAsync();
-                Console.WriteLine("Update successfully");
+            }
+            catch (DbUpdateException error)
+            {
+                log.Error(error);
+                throw;
+            }
+            catch (DbEntityValidationException error)
+            {
+                log.Error(error);
+                throw;
+            }
+            catch (NotSupportedException error)
+            {
+                log.Error(error);
+                throw;
+            }
+            catch (ObjectDisposedException error)
+            {
+                log.Error(error);
+                throw;
+            }
+            catch (InvalidOperationException error)
+            {
+                log.Error(error);
+                throw;
             }
         }
 
-        public static void DeleteStudent(int id)
+        public void UpdateStudent(int id, string Name)
         {
             using (StudentEntities db = new StudentEntities())
             {
-                var students = db.Student.Where(student => student.Studentid == id).ToList();
-                db.Student.RemoveRange(students);
-                db.SaveChangesAsync();
-                Console.WriteLine("Delete successfully");
+                try
+                {
+                    var students = db.Student.Where(student => student.Studentid == id).ToList();
+                    students.ForEach(student => student.Name = Name);
+                    db.SaveChangesAsync();
+                }
+                catch (ArgumentNullException error)
+                {
+                    log.Error(error);
+                    throw;
+                }
+                catch (DbUpdateException error)
+                {
+                    log.Error(error);
+                    throw;
+                }
+                catch (DbEntityValidationException error)
+                {
+                    log.Error(error);
+                    throw;
+                }
+                catch (NotSupportedException error)
+                {
+                    log.Error(error);
+                    throw;
+                }
+                catch (ObjectDisposedException error)
+                {
+                    log.Error(error);
+                    throw;
+                }
+                catch (InvalidOperationException error)
+                {
+                    log.Error(error);
+                    throw;
+                }
+            }
+        }
+
+        public void DeleteStudent(int id)
+        {
+            using (StudentEntities db = new StudentEntities())
+            {
+                try
+                {
+                    var students = db.Student.Find(id);
+                    db.Student.Remove(students);
+                    db.SaveChangesAsync();
+                }
+                catch (ArgumentNullException error)
+                {
+                    log.Error(error);
+                    throw;
+                }
+                catch (DbUpdateException error)
+                {
+                    log.Error(error);
+                    throw;
+                }
+                catch (DbEntityValidationException error)
+                {
+                    log.Error(error);
+                    throw;
+                }
+                catch (NotSupportedException error)
+                {
+                    log.Error(error);
+                    throw;
+                }
+                catch (ObjectDisposedException error)
+                {
+                    log.Error(error);
+                    throw;
+                }
+                catch (InvalidOperationException error)
+                {
+                    log.Error(error);
+                    throw;
+                }
             }
         }
 
