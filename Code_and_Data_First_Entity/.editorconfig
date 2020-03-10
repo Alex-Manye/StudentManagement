@@ -11,3 +11,6 @@ dotnet_diagnostic.S1118.severity = silent
 
 # IDE0040: Agregar modificadores de accesibilidad
 dotnet_style_require_accessibility_modifiers = for_non_interface_members:silent
+
+# S3246: Generic type parameters should be co/contravariant when possible
+dotnet_diagnostic.S3246.severity = silent
