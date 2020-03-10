@@ -8,7 +8,7 @@ using log4net;
 
 namespace DatabaseFirstEntityFramework.Entity
 {
-    public class OperationSql : SqlServer
+    public class OperationSql : SqlServer<Student>
     {
         private static readonly ILog log = LogManager.GetLogger(typeof(OperationSql));
         public void ReadStudents()
@@ -40,7 +40,7 @@ namespace DatabaseFirstEntityFramework.Entity
             db.Student.Add(student);
             try
             {
-                db.SaveChangesAsync();
+                db.SaveChanges();
             }
             catch (DbUpdateException error)
             {
@@ -69,15 +69,15 @@ namespace DatabaseFirstEntityFramework.Entity
             }
         }
 
-        public void UpdateStudent(int id, string Name)
+        public void UpdateStudent(Student id)
         {
             using (StudentEntities db = new StudentEntities())
             {
                 try
                 {
-                    var students = db.Student.Where(student => student.Studentid == id).ToList();
-                    students.ForEach(student => student.Name = Name);
-                    db.SaveChangesAsync();
+                    var students = db.Student.Where(student => student.Studentid == id.Studentid).ToList();
+                    students.ForEach(student => student.Name = id.Name);
+                    db.SaveChanges();
                 }
                 catch (ArgumentNullException error)
                 {
@@ -112,15 +112,15 @@ namespace DatabaseFirstEntityFramework.Entity
             }
         }
 
-        public void DeleteStudent(int id)
+        public void DeleteStudent(Student id)
         {
             using (StudentEntities db = new StudentEntities())
             {
                 try
                 {
-                    var students = db.Student.Find(id);
+                    var students = db.Student.Find(id.Studentid);
                     db.Student.Remove(students);
-                    db.SaveChangesAsync();
+                    db.SaveChanges();
                 }
                 catch (ArgumentNullException error)
                 {

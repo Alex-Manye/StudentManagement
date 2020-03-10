@@ -1,10 +1,10 @@
 ﻿namespace CodeFirstEntityFramework
 {
-    interface SqlServer
+    public interface SqlServer<T>
     {
         void ReadStudents();
-        void CreateStudent(StudentDao student);
-        void UpdateStudent(int id, string Name);
-        void DeleteStudent(int id);
+        void CreateStudent(T student);
+        void UpdateStudent(T id);
+        void DeleteStudent(T id);
     }
 }
