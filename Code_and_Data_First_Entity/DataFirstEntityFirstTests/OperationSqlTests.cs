@@ -29,12 +29,18 @@ namespace DatabaseFirstEntityFramework.Entity.Tests
         [TestMethod()]
         public void UpdateStudentTest()
         {
-            operation.UpdateStudent(1,"Paula");
+            Student studentID = new Student();
+            studentID.Studentid = 1402;
+            studentID.Name = "Laura";
+            operation.UpdateStudent(studentID);
         }
 
         [TestMethod()]
         public void DeleteStudentTest()
         {
-            operation.DeleteStudent(1402);
-        }    }
+            Student studentID = new Student();
+            studentID.Studentid = 2407;
+            operation.DeleteStudent(studentID);
+        }   
+    }
 }

@@ -29,15 +29,19 @@ namespace CodeFirstEntityFramework.Tests
         [TestMethod()]
         public void UpdateStudentTest()
         {
-            string name = "Marta";
-            operation.UpdateStudent(1,name);
+            StudentDao studentID = new StudentDao();
+            studentID.StudentId = 2;
+            studentID.StudentName = "Laura";
+            operation.UpdateStudent(studentID);
 
         }
 
         [TestMethod()]
         public void DeleteStudentTest()
         {
-            operation.DeleteStudent(1402);
+            StudentDao studentID = new StudentDao();
+            studentID.StudentId = 6;
+            operation.DeleteStudent(studentID);
         }
     }
 }
