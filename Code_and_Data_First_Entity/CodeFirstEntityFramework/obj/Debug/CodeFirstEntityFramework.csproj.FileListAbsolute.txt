@@ -8,14 +8,6 @@ C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFramework\bin
 C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFramework\obj\Debug\CodeFirstEntityFramework.csproj.CopyComplete
 C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFramework\obj\Debug\CodeFirstEntityFramework.dll
 C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFramework\obj\Debug\CodeFirstEntityFramework.pdb
+C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFramework\bin\Debug\log4net.dll
+C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFramework\bin\Debug\log4net.xml
 C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFramework\obj\Debug\CodeFirstEntityFramework.csprojAssemblyReference.cache
-C:\Users\holacons\Desktop\BBDDVueling\entity\StudentManagement\CodeFirstEntityFramework\bin\Debug\CodeFirstEntityFramework.dll.config
-C:\Users\holacons\Desktop\BBDDVueling\entity\StudentManagement\CodeFirstEntityFramework\bin\Debug\CodeFirstEntityFramework.dll
-C:\Users\holacons\Desktop\BBDDVueling\entity\StudentManagement\CodeFirstEntityFramework\bin\Debug\CodeFirstEntityFramework.pdb
-C:\Users\holacons\Desktop\BBDDVueling\entity\StudentManagement\CodeFirstEntityFramework\bin\Debug\EntityFramework.dll
-C:\Users\holacons\Desktop\BBDDVueling\entity\StudentManagement\CodeFirstEntityFramework\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\holacons\Desktop\BBDDVueling\entity\StudentManagement\CodeFirstEntityFramework\bin\Debug\EntityFramework.xml
-C:\Users\holacons\Desktop\BBDDVueling\entity\StudentManagement\CodeFirstEntityFramework\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\holacons\Desktop\BBDDVueling\entity\StudentManagement\CodeFirstEntityFramework\obj\Debug\CodeFirstEntityFramework.csproj.CopyComplete
-C:\Users\holacons\Desktop\BBDDVueling\entity\StudentManagement\CodeFirstEntityFramework\obj\Debug\CodeFirstEntityFramework.dll
-C:\Users\holacons\Desktop\BBDDVueling\entity\StudentManagement\CodeFirstEntityFramework\obj\Debug\CodeFirstEntityFramework.pdb
