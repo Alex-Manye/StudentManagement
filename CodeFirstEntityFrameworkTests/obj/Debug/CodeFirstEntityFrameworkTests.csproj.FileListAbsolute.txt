@@ -22,3 +22,5 @@ C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFrameworkTest
 C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFrameworkTests\bin\Debug\CodeFirstEntityFrameworkTests.dll.config
 C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFrameworkTests\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFrameworkTests\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFrameworkTests\bin\Debug\log4net.dll
+C:\Users\joan.miquel\source\repos\StudentManagement\CodeFirstEntityFrameworkTests\bin\Debug\log4net.xml

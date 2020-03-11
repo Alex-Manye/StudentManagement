@@ -1,10 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using DatabaseFirstEntityFramework.Entity;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using DataFirstEntityFirst.Entity;
 
 namespace DatabaseFirstEntityFramework.Entity.Tests
@@ -12,10 +7,11 @@ namespace DatabaseFirstEntityFramework.Entity.Tests
     [TestClass()]
     public class OperationSqlTests
     {
+        readonly OperationSql operation = new OperationSql();
         [TestMethod()]
         public void ReadStudentsTest()
         {
-            OperationSql.ReadStudents();
+            operation.ReadStudents();
         }
 
         [TestMethod()]
@@ -27,19 +23,18 @@ namespace DatabaseFirstEntityFramework.Entity.Tests
                 Surname = "Pardo",
                 Birthday = new DateTime(2002, 02, 17)
             };
-            OperationSql.CreateStudent(student);
+            operation.CreateStudent(student);
         }
 
         [TestMethod()]
         public void UpdateStudentTest()
         {
-            OperationSql.UpdateStudent(1,"Paula");
+            operation.UpdateStudent(1,"Paula");
         }
 
         [TestMethod()]
         public void DeleteStudentTest()
         {
-            OperationSql.DeleteStudent(1);
-        }
-    }
+            operation.DeleteStudent(1402);
+        }    }
 }

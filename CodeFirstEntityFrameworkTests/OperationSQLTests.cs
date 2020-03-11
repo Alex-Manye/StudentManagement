@@ -6,10 +6,11 @@ namespace CodeFirstEntityFramework.Tests
     [TestClass()]
     public class OperationSQLTests
     {
+        readonly OperationSQL operation = new OperationSQL();
         [TestMethod()]
         public void ReadStudentTest()
         {
-            OperationSQL.ReadStudents();
+            operation.ReadStudents();
         }
 
         [TestMethod()]
@@ -22,21 +23,21 @@ namespace CodeFirstEntityFramework.Tests
                 BirthDate = new DateTime(2002, 02, 17)
             };
 
-            OperationSQL.CreateStudent(student);
+            operation.CreateStudent(student);
         }
 
         [TestMethod()]
         public void UpdateStudentTest()
         {
             string name = "Marta";
-            OperationSQL.UpdateStudent(1,name);
+            operation.UpdateStudent(1,name);
 
         }
 
         [TestMethod()]
         public void DeleteStudentTest()
         {
-            OperationSQL.DeleteStudent(1);
+            operation.DeleteStudent(1402);
         }
     }
 }

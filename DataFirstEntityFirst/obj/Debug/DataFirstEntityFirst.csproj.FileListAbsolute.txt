@@ -9,3 +9,5 @@ C:\Users\joan.miquel\source\repos\StudentManagement\DataFirstEntityFirst\obj\Deb
 C:\Users\joan.miquel\source\repos\StudentManagement\DataFirstEntityFirst\obj\Debug\DataFirstEntityFirst.dll
 C:\Users\joan.miquel\source\repos\StudentManagement\DataFirstEntityFirst\obj\Debug\DataFirstEntityFirst.pdb
 C:\Users\joan.miquel\source\repos\StudentManagement\DataFirstEntityFirst\obj\Debug\DataFirstEntityFirst.csprojAssemblyReference.cache
+C:\Users\joan.miquel\source\repos\StudentManagement\DataFirstEntityFirst\bin\Debug\log4net.dll
+C:\Users\joan.miquel\source\repos\StudentManagement\DataFirstEntityFirst\bin\Debug\log4net.xml

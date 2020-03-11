@@ -22,3 +22,5 @@ C:\Users\joan.miquel\source\repos\StudentManagement\DataFirstEntityFirstTests\ob
 C:\Users\joan.miquel\source\repos\StudentManagement\DataFirstEntityFirstTests\bin\Debug\DataFirstEntityFirstTests.dll.config
 C:\Users\joan.miquel\source\repos\StudentManagement\DataFirstEntityFirstTests\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\joan.miquel\source\repos\StudentManagement\DataFirstEntityFirstTests\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\joan.miquel\source\repos\StudentManagement\DataFirstEntityFirstTests\bin\Debug\log4net.dll
+C:\Users\joan.miquel\source\repos\StudentManagement\DataFirstEntityFirstTests\bin\Debug\log4net.xml
