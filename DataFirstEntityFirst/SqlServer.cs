@@ -2,11 +2,11 @@
 
 namespace DataFirstEntityFirst
 {
-    interface SqlServer
+    interface SqlServer<T>
     {
         void ReadStudents();
-        void CreateStudent(Student student);
-        void UpdateStudent(int id, string Name);
-        void DeleteStudent(int id);
+        void CreateStudent(T student);
+        void UpdateStudent(T id);
+        void DeleteStudent(T id);
     }
 }

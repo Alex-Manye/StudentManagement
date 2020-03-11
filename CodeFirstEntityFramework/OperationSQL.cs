@@ -6,7 +6,7 @@ using log4net;
 
 namespace CodeFirstEntityFramework
 {
-    public class OperationSQL : SqlServer
+    public class OperationSQL : SqlServer<StudentDao>
     {
         private static readonly ILog log = LogManager.GetLogger(typeof(OperationSQL));
 
@@ -40,7 +40,7 @@ namespace CodeFirstEntityFramework
                 db.Students.Add(student);
                 try
                 {
-                    db.SaveChangesAsync();
+                    db.SaveChanges();
                 }
                 catch (DbUpdateException error)
                 {
@@ -70,15 +70,15 @@ namespace CodeFirstEntityFramework
             }
         }
 
-        public void UpdateStudent(int id, string Name)
+        public void UpdateStudent(StudentDao id)
         {
             using (StudentContext db = new StudentContext())
             {
                 try
                 {
-                    var students = db.Students.Where(student => student.StudentId == id).ToList();
-                    students.ForEach(student => student.StudentName = Name);
-                    db.SaveChangesAsync();
+                    var students = db.Students.Where(student => student.StudentId == id.StudentId).ToList();
+                    students.ForEach(student => student.StudentName = id.StudentName);
+                    db.SaveChanges();
                 }
                 catch (ArgumentNullException error)
                 {
@@ -112,15 +112,15 @@ namespace CodeFirstEntityFramework
                 }
             }
         }
-        public void DeleteStudent(int id)
+        public void DeleteStudent(StudentDao id)
         {
             using (StudentContext db = new StudentContext())
             {
                 try
                 {
-                    var students = db.Students.Where(student => student.StudentId == id).ToList();
+                    var students = db.Students.Where(student => student.StudentId == id.StudentId).ToList();
                     db.Students.RemoveRange(students);
-                    db.SaveChangesAsync();
+                    db.SaveChanges();
                 }
                 catch (ArgumentNullException error)
                 {
