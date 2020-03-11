@@ -39,7 +39,7 @@ namespace DatabaseFirstEntityFramework.Entity.Tests
         public void DeleteStudentTest()
         {
             Student studentID = new Student();
-            studentID.Studentid = 2407;
+            studentID.Studentid = 2405;
             operation.DeleteStudent(studentID);
         }   
     }
